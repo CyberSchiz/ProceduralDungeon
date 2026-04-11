@@ -18,6 +18,7 @@ public class RoomFirstGenerator : DungeonGenerator
     [SerializeField]
     private bool randomWalkRooms = false;
 
+
     [SerializeField]
     private GameObject player;
 
@@ -86,7 +87,8 @@ public class RoomFirstGenerator : DungeonGenerator
     //create organic rooms using random walk
     private HashSet<Vector2Int> CreateRoomsRandomly(List<BoundsInt> roomsList)
     {
-        HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
+
+    HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
         for (int i = 0; i < roomsList.Count; i++)
         {
             var roomBounds = roomsList[i];

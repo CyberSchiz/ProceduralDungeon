@@ -22,7 +22,10 @@ public class DungeonGenerator : MonoBehaviour
 
     [SerializeField]
     protected int seed = 0;
-    
+
+    private List<HashSet<Vector2Int>> individualRooms;
+
+
     //main generation method (can be overrided)
     [Button]
     public virtual void RunProceduralGeneration()
@@ -50,6 +53,8 @@ public class DungeonGenerator : MonoBehaviour
 
     protected HashSet<Vector2Int> RunRandomWalk(SimpleRandomWalkSO paramaters, Vector2Int position, int seed)
     {
+    individualRooms = new List<HashSet<Vector2Int>>();
+
         Random.InitState(seed);
 
         var currentPos = position;
@@ -64,6 +69,7 @@ public class DungeonGenerator : MonoBehaviour
                 currentPos = floorPos.ElementAt(Random.Range(0, floorPos.Count));
         }
 
+        individualRooms.Add(floorPos);
         return floorPos;
     }
 }
