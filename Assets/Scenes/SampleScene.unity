@@ -200,7 +200,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.5, y: 0.5, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -276,8 +276,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TileMapSpawner
   floor: {fileID: 43828337}
   wall: {fileID: 2085366529}
-  floorTile: {fileID: 11400000, guid: fca97d55e96cd7e40b7be41397beda3b, type: 2}
-  wallTop: {fileID: 11400000, guid: 2c72fd90fbfa2114d8db106185c820d8, type: 2}
+  floorTile: {fileID: 11400000, guid: 732fb83601a48df4980a8845c5c37c78, type: 2}
+  floorTile2: {fileID: 11400000, guid: 5a9dbb865bb84fa4c8800758260c5c25, type: 2}
+  floorTile3: {fileID: 11400000, guid: fca97d55e96cd7e40b7be41397beda3b, type: 2}
+  wallTop: {fileID: 11400000, guid: 2abe73569e31afc4ebb17dc739a73780, type: 2}
+  lavaFloor1: {fileID: 11400000, guid: d5581dd17af5a1649a0e333ac9f35a97, type: 2}
+  lavaFloor2: {fileID: 11400000, guid: 0ae6068a6e053b348a1a51ecadc41df7, type: 2}
+  lavaFloor3: {fileID: 11400000, guid: 87d264a2bc33d484ea0a72e47ed78f66, type: 2}
+  lavaWall: {fileID: 0}
+  iceFloor1: {fileID: 11400000, guid: 21462f954be6ee54cbf17ed45e7edae8, type: 2}
+  iceFloor2: {fileID: 11400000, guid: dcd82e57e5edf114baa0871f4fcc17df, type: 2}
+  iceFloor3: {fileID: 11400000, guid: 72af934a13c5f914ca46e4afea670b7f, type: 2}
+  iceWall: {fileID: 0}
 --- !u!4 &44746983
 Transform:
   m_ObjectHideFlags: 0
@@ -328,7 +338,7 @@ MonoBehaviour:
   seed: 0
   minRoomWidth: 10
   minRoomHeight: 10
-  dungeonWidth: 50
+  dungeonWidth: 100
   dungeonHeight: 100
   offset: 2
   randomWalkRooms: 1
@@ -653,7 +663,7 @@ Transform:
   m_GameObject: {fileID: 796090645}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: 44, z: 0}
+  m_LocalPosition: {x: 8, y: 92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -908,7 +918,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.5, y: 0.5, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0

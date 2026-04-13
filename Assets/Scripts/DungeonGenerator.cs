@@ -23,8 +23,6 @@ public class DungeonGenerator : MonoBehaviour
     [SerializeField]
     protected int seed = 0;
 
-    private List<HashSet<Vector2Int>> individualRooms;
-
 
     //main generation method (can be overrided)
     [Button]
@@ -36,7 +34,7 @@ public class DungeonGenerator : MonoBehaviour
         //Generate random floor with random walk
         HashSet<Vector2Int> floorPos = RunRandomWalk(paramatersSO, startPosition, seed);
         //spawn tiles
-        tileMapSpawner.SpawnFloorTiles(floorPos);
+        tileMapSpawner.SpawnFloorBiomeRooms(floorPos);
         WallGenerator.CreateWalls(floorPos, tileMapSpawner);
     }
 
@@ -53,8 +51,6 @@ public class DungeonGenerator : MonoBehaviour
 
     protected HashSet<Vector2Int> RunRandomWalk(SimpleRandomWalkSO paramaters, Vector2Int position, int seed)
     {
-    individualRooms = new List<HashSet<Vector2Int>>();
-
         Random.InitState(seed);
 
         var currentPos = position;
@@ -69,7 +65,6 @@ public class DungeonGenerator : MonoBehaviour
                 currentPos = floorPos.ElementAt(Random.Range(0, floorPos.Count));
         }
 
-        individualRooms.Add(floorPos);
         return floorPos;
     }
 }

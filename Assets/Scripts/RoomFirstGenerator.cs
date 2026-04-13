@@ -60,7 +60,7 @@ public class RoomFirstGenerator : DungeonGenerator
 
 
         //spawn tiles
-        tileMapSpawner.SpawnFloorTiles(floor);
+        tileMapSpawner.SpawnFloorBiomeRooms(floor);
         WallGenerator.CreateWalls(floor, tileMapSpawner);
     }
 
@@ -87,28 +87,38 @@ public class RoomFirstGenerator : DungeonGenerator
     //create organic rooms using random walk
     private HashSet<Vector2Int> CreateRoomsRandomly(List<BoundsInt> roomsList)
     {
+        HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
+        individualRooms = new List<HashSet<Vector2Int>>();
 
-    HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
         for (int i = 0; i < roomsList.Count; i++)
         {
             var roomBounds = roomsList[i];
+            var roomCenter = new Vector2Int(
+                Mathf.RoundToInt(roomBounds.center.x),
+                Mathf.RoundToInt(roomBounds.center.y)
+            );
 
-            //calculate the center of the room
-            var roomCenter = new Vector2Int(Mathf.RoundToInt(roomBounds.center.x), Mathf.RoundToInt(roomBounds.center.y));
-            //generate a random seed for this room
             int seed = Random.Range(0, 1000);
             var roomFloor = RunRandomWalk(paramatersSO, roomCenter, seed);
-            //add tiles that are in the roomBounds to the floor tileset
+
+            HashSet<Vector2Int> filteredRoom = new HashSet<Vector2Int>();
+
             foreach (var position in roomFloor)
             {
-                if ((position.x >= (roomBounds.xMin + offset)) && (position.x <= (roomBounds.xMax - offset)) && (position.y >= (roomBounds.yMin + offset)) && (position.y <= roomBounds.yMax - offset))
+                if ((position.x >= (roomBounds.xMin + offset)) &&
+                    (position.x <= (roomBounds.xMax - offset)) &&
+                    (position.y >= (roomBounds.yMin + offset)) &&
+                    (position.y <= (roomBounds.yMax - offset)))
                 {
+                    filteredRoom.Add(position);
                     floor.Add(position);
                 }
             }
+
+            individualRooms.Add(filteredRoom);
         }
+
         return floor;
-            
     }
     // create L shaped corridor
     private HashSet<Vector2Int> CreateCorridor(Vector2Int currentRoomCenter, Vector2Int destination)
