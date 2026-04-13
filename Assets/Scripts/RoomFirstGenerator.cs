@@ -88,7 +88,6 @@ public class RoomFirstGenerator : DungeonGenerator
     private HashSet<Vector2Int> CreateRoomsRandomly(List<BoundsInt> roomsList)
     {
         HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
-        individualRooms = new List<HashSet<Vector2Int>>();
 
         for (int i = 0; i < roomsList.Count; i++)
         {
@@ -115,7 +114,6 @@ public class RoomFirstGenerator : DungeonGenerator
                 }
             }
 
-            individualRooms.Add(filteredRoom);
         }
 
         return floor;

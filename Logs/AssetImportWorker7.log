@@ -1,9 +1,9 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.2/staging' branch; Version is '6000.2.10f1 (d3d30d158480) revision 13882125'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-User" at "2026-04-13T13:28:32.7502093Z"
 OS: 'Windows 11  (10.0.26200) 64bit Core' Language: 'en' Physical Memory: 32692 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-User" at "2026-04-13T15:44:52.133302Z"
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-Date: 2026-04-13T13:28:32Z
+Date: 2026-04-13T15:44:52Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\6000.2.10f1\Editor\Unity.exe
@@ -17,7 +17,7 @@ E:/ProceduralDungeon
 -logFile
 Logs/AssetImportWorker7.log
 -srvPort
-49187
+53335
 -licensingIpc
 LicenseClient-User
 -job-worker-count
@@ -65,12 +65,12 @@ E:/ProceduralDungeon
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [32168]  Target information:
+Player connection [21660]  Target information:
 
-Player connection [32168]  * "[IP] 192.168.1.184 [Port] 0 [Flags] 2 [Guid] 3728480924 [EditorId] 3728480924 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-MROA2G9) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [21660]  * "[IP] 192.168.1.184 [Port] 0 [Flags] 2 [Guid] 3376989862 [EditorId] 3376989862 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-MROA2G9) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [32168] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [32168] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [21660] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [21660] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 11
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -79,13 +79,13 @@ Input System module state changed to: Initialized.
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.17.4+4293ba1
-  Session Id:              f6a64901c56e4b4dbfd5a9ac735d4ecf
+  Session Id:              68d2299bbb8942388179905cc91ca9c4
   Correlation Id:          8dc16a7e6dc6b785d390777278f71beb
-  External correlation Id: 4927557881037830582
+  External correlation Id: 319502096701690829
   Machine Id:              N26h/t0TNiQkg8J0E+Djhoi8Vvg=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-User" (connect: 0.00s, validation: 0.01s, handshake: 0.16s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-User-notifications" at "2026-04-13T13:28:32.9126338Z"
-[Licensing::Module] Licensing Background thread has ended after 0.16s
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-User" (connect: 0.00s, validation: 0.00s, handshake: 0.06s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-User-notifications" at "2026-04-13T15:44:52.1964371Z"
+[Licensing::Module] Licensing Background thread has ended after 0.06s
 Library Redirect Path: Library/
 [Physics::Module] Selected backend.
 [Physics::Module] Name: PhysX
@@ -93,7 +93,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 147.27 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 5.88 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.2.10f1 (d3d30d158480)
 [Subsystems] Discovering subsystems at path C:/Program Files/6000.2.10f1/Editor/Data/Resources/UnitySubsystems
@@ -109,42 +109,42 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/6000.2.10f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/6000.2.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/6000.2.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56948
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56464
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/6000.2.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003648 seconds.
-- Loaded All Assemblies, in  1.309 seconds
+Registered in 0.002126 seconds.
+- Loaded All Assemblies, in  0.449 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.415 seconds
-Domain Reload Profiling: 1720ms
-	BeginReloadAssembly (176ms)
+- Finished resetting the current domain, in  0.395 seconds
+Domain Reload Profiling: 840ms
+	BeginReloadAssembly (175ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (209ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (72ms)
-	LoadAllAssembliesAndSetupDomain (835ms)
-		LoadAssemblies (170ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (52ms)
+	LoadAllAssembliesAndSetupDomain (167ms)
+		LoadAssemblies (168ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (832ms)
-			TypeCache.Refresh (828ms)
-				TypeCache.ScanAssembly (813ms)
+		AnalyzeDomain (163ms)
+			TypeCache.Refresh (161ms)
+				TypeCache.ScanAssembly (145ms)
 			BuildScriptInfoCaches (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (416ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (395ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (366ms)
+		SetupLoadedEditorAssemblies (350ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (58ms)
+			InitializePlatformSupportModulesInManaged (57ms)
 			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (79ms)
-			ProcessInitializeOnLoadAttributes (163ms)
+			BeforeProcessingInitializeOnLoad (72ms)
+			ProcessInitializeOnLoadAttributes (155ms)
 			ProcessInitializeOnLoadMethodAttributes (62ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
@@ -165,257 +165,198 @@ Begin MonoManager ReloadAssembly
   Product: Unity Personal
   Type: Assigned
   Expiration: Unlimited
-- Loaded All Assemblies, in  1.012 seconds
-Refreshing native plugins compatible for Editor in 2.60 ms, found 4 plugins.
+- Loaded All Assemblies, in  1.013 seconds
+Refreshing native plugins compatible for Editor in 2.65 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.768 seconds
-Domain Reload Profiling: 2773ms
-	BeginReloadAssembly (210ms)
+- Finished resetting the current domain, in  1.574 seconds
+Domain Reload Profiling: 2580ms
+	BeginReloadAssembly (201ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
+		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (39ms)
-	RebuildCommonClasses (38ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (47ms)
-	LoadAllAssembliesAndSetupDomain (699ms)
-		LoadAssemblies (494ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (708ms)
+		LoadAssemblies (505ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (316ms)
-			TypeCache.Refresh (241ms)
-				TypeCache.ScanAssembly (224ms)
-			BuildScriptInfoCaches (58ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (1768ms)
+		AnalyzeDomain (307ms)
+			TypeCache.Refresh (226ms)
+				TypeCache.ScanAssembly (210ms)
+			BuildScriptInfoCaches (62ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1575ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1614ms)
+		SetupLoadedEditorAssemblies (1395ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (187ms)
-			ProcessInitializeOnLoadAttributes (1180ms)
-			ProcessInitializeOnLoadMethodAttributes (224ms)
-			AfterProcessingInitializeOnLoad (15ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (206ms)
+			ProcessInitializeOnLoadAttributes (1001ms)
+			ProcessInitializeOnLoadMethodAttributes (170ms)
+			AfterProcessingInitializeOnLoad (9ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.21 seconds
-Refreshing native plugins compatible for Editor in 2.94 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (8ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 1.73 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6811 unused Assets / (4.5 MB). Loaded Objects now: 7611.
-Memory consumption went from 142.3 MB to 137.8 MB.
-Total: 42.912900 ms (FindLiveObjects: 1.571700 ms CreateObjectMapping: 2.226500 ms MarkObjects: 35.330100 ms  DeleteObjects: 3.782300 ms)
+Unloading 6811 unused Assets / (4.2 MB). Loaded Objects now: 7611.
+Memory consumption went from 146.4 MB to 142.2 MB.
+Total: 26.294500 ms (FindLiveObjects: 1.026600 ms CreateObjectMapping: 1.254300 ms MarkObjects: 21.502300 ms  DeleteObjects: 2.509900 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 57737.281416 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_219.asset
-  artifactKey: Guid(acf2a86980d769b488251df9684d8562) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_219.asset using Guid(acf2a86980d769b488251df9684d8562) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)
-=================================================================
-	Native Crash Reporting
-=================================================================
-Got a UNKNOWN while executing native code. This usually indicates
-a fatal error in the mono runtime or one of the native libraries 
-used by your application.
-=================================================================
-
-=================================================================
-	Managed Stacktrace:
-=================================================================
-	  at <unknown> <0xffffffff>
-	  at System.Reflection.RuntimePropertyInfo:get_property_info <0x0007c>
-	  at System.Reflection.RuntimePropertyInfo:CachePropertyInfo <0x00042>
-	  at System.Reflection.RuntimePropertyInfo:get_PropertyType <0x00022>
-	  at UnityEditor.Rendering.Universal.MaterialReferenceBuilder:HasMaterialProperty <0x00017>
-	  at System.Linq.Enumerable:Any <0x00096>
-	  at <>c:<GetMaterialReferenceLookup>b__2_0 <0x0009a>
-	  at WhereEnumerableIterator`1:MoveNext <0x000ea>
-	  at UnityEditor.Rendering.Universal.MaterialReferenceBuilder:GetMaterialReferenceLookup <0x00478>
-	  at UnityEditor.Rendering.Universal.MaterialReferenceBuilder:.cctor <0x00032>
-	  at System.Object:runtime_invoke_void <0x00084>
-	  at <unknown> <0xffffffff>
-	  at System.Object:__icall_wrapper_mono_generic_class_init <0x0006a>
-	  at UnityEditor.Rendering.Universal.ConversionIndexers:ConversionIndexer <0x0006a>
-	  at <Module>:invoke_void_CustomObjectIndexerTarget_ObjectIndexer <0x00113>
-	  at UnityEditor.Search.ObjectIndexer:CallCustomIndexers <0x004c9>
-	  at UnityEditor.Search.ObjectIndexer:IndexCustomProperties <0x00132>
-	  at UnityEditor.Search.AssetIndexer:IndexProperties <0x0041a>
-	  at UnityEditor.Search.AssetIndexer:IndexDocument <0x00e3a>
-	  at UnityEditor.Search.SearchIndexEntryImporter:OnImportAsset <0x00163>
-	  at UnityEditor.AssetImporters.ScriptedImporter:GenerateAssetData <0x00018>
-	  at <Module>:runtime_invoke_void__this___object <0x00092>
-=================================================================
- -> (artifact id: '72e1f5aaed8def1e05291af50ffdec55') in 0.3133888 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 65913.407147 seconds.
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_61.asset
+  artifactKey: Guid(054ae7369bd9834418b5d622eee869b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_61.asset using Guid(054ae7369bd9834418b5d622eee869b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd71d221e5b9327741e91f0356186deff') in 0.1335127 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000024 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_132.asset
-  artifactKey: Guid(cdfaa94098089b14c8b96dae477af631) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_132.asset using Guid(cdfaa94098089b14c8b96dae477af631) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '97f8e86a59b23fec23cfe73b8464b5e3') in 0.0300562 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_69.asset
+  artifactKey: Guid(58fc7a5e1858dd24696bf87df7a25454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_69.asset using Guid(58fc7a5e1858dd24696bf87df7a25454) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c7ebc0b085a3958f241710e9cefbcc4b') in 0.0194395 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_91.asset
-  artifactKey: Guid(a6293a7832a4152468580894e3844ada) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_91.asset using Guid(a6293a7832a4152468580894e3844ada) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '61624ab4e9516ecfd3a8ce82387a1200') in 0.0291843 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_123.asset
-  artifactKey: Guid(ec43d4d72ec00d744ada248fcbb0672b) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_123.asset using Guid(ec43d4d72ec00d744ada248fcbb0672b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '472e0449ea5c7494918409f5ffe7b5d5') in 0.0319076 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_207.asset
-  artifactKey: Guid(5569a631bf7b2ce4982a950d1ef562a5) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_207.asset using Guid(5569a631bf7b2ce4982a950d1ef562a5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '6961b808ecf8fa701626325e33de5d31') in 0.0224119 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_60.asset
-  artifactKey: Guid(eae896eb18bd0274da551da1e0a6f00c) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_60.asset using Guid(eae896eb18bd0274da551da1e0a6f00c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4dcbe8e2e64a652c9524aa5f882a1ff1') in 0.0265912 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000064 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_79.asset
-  artifactKey: Guid(8826cafa5a779d2479ebb0732b4d34ee) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_79.asset using Guid(8826cafa5a779d2479ebb0732b4d34ee) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c3e389d7f95683400d8d62a24e5d1c91') in 0.0207432 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_190.asset
-  artifactKey: Guid(9dc0e3b52ad6ff046b6529fb3a3a02e5) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_190.asset using Guid(9dc0e3b52ad6ff046b6529fb3a3a02e5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5048a2e222365befbadd12d57d2faab9') in 0.0202993 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.018869 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_130.asset
-  artifactKey: Guid(4f1f6239d06b91f448d7ae535419e506) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_130.asset using Guid(4f1f6239d06b91f448d7ae535419e506) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b700188740951b8019eef503f8d1426c') in 0.0255443 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_25.asset
-  artifactKey: Guid(824671fe4faeef645a763a995d4029b7) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_25.asset using Guid(824671fe4faeef645a763a995d4029b7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '74b298088c80586647a167fd53a8fec1') in 0.0259921 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.825913 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_43.asset
-  artifactKey: Guid(f4096c6dbc421f44492f588afb0c55de) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_43.asset using Guid(f4096c6dbc421f44492f588afb0c55de) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8373bab1bc3f071897d097dafedcaee7') in 0.0235689 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.412017 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_199.asset
-  artifactKey: Guid(01244b879e9ba8a408ec904bb26996a8) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_199.asset using Guid(01244b879e9ba8a408ec904bb26996a8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'bad7c47ccfd06661a752a3cd26cbc0bd') in 0.0260354 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.428946 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_166.asset
-  artifactKey: Guid(548bd26607562594a9d49f929745aaac) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_166.asset using Guid(548bd26607562594a9d49f929745aaac) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0dd85c4ad7e4b4cee020cd87dd70a3a4') in 0.0208326 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_153.asset
-  artifactKey: Guid(b65f695a63abed74c92dc2d669963290) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_153.asset using Guid(b65f695a63abed74c92dc2d669963290) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3a40c77e84a43929940d094ab3f38845') in 0.0186437 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.377941 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_42.asset
-  artifactKey: Guid(6b689fcc2ffc06541ae225fa9d36e2b9) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_42.asset using Guid(6b689fcc2ffc06541ae225fa9d36e2b9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '95ae1ebdbaa8db81bcc9e39b713776cb') in 0.0204693 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.078709 seconds.
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_75.asset
+  artifactKey: Guid(cbc341d15d15a3842ac75c79ebd3b9bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_75.asset using Guid(cbc341d15d15a3842ac75c79ebd3b9bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '33d3eea4561780fefe1d244120781b35') in 0.0388663 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000019 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_174.asset
-  artifactKey: Guid(2e634b9e0b120e448b9356e249ac283a) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_174.asset using Guid(2e634b9e0b120e448b9356e249ac283a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '34e8aa353f52244760d97089c86f5420') in 0.0208208 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_83.asset
+  artifactKey: Guid(3627f2f87e163ba46a447a4f615e68e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_83.asset using Guid(3627f2f87e163ba46a447a4f615e68e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ff74eab525ad50e79e859e2457a1fc07') in 0.0273359 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.366268 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_133.asset
-  artifactKey: Guid(e8f3c97a5ed6a914491e778ea58f2ada) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_133.asset using Guid(e8f3c97a5ed6a914491e778ea58f2ada) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b08c8ab91c8145f9664a5ba408a42537') in 0.0212604 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000021 seconds.
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_88.asset
+  artifactKey: Guid(c6b35b15cec0ec7419c62869b29d0486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_88.asset using Guid(c6b35b15cec0ec7419c62869b29d0486) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0b7d7f3c06eac217f688b32faa3cf546') in 0.0294406 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_127.asset
-  artifactKey: Guid(42f39c4fd7cd9d24cb63dfcdf9f890a0) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_127.asset using Guid(42f39c4fd7cd9d24cb63dfcdf9f890a0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '414b16e32bddf5e657149ecbf655ce34') in 0.0201236 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000026 seconds.
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_85.asset
+  artifactKey: Guid(37746f6f64ed38a478032b5082cd6d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_85.asset using Guid(37746f6f64ed38a478032b5082cd6d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4f331866d66a8f7130e202d0dc85c041') in 0.0293954 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_205.asset
-  artifactKey: Guid(6fbfeff1acc68ec4980fd426392465bb) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_205.asset using Guid(6fbfeff1acc68ec4980fd426392465bb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'f7849fc1b370d608471822f0db1d889a') in 0.0207262 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 1.362640 seconds.
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_103.asset
+  artifactKey: Guid(d94a506d99620c5449937a9cc265b1ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_103.asset using Guid(d94a506d99620c5449937a9cc265b1ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2e434535a035945fc67c9a011ca6c5a9') in 0.0430261 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_107.asset
+  artifactKey: Guid(9856f4cacda5db746bcb7ae3f05d0d44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_107.asset using Guid(9856f4cacda5db746bcb7ae3f05d0d44) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'afbb31628f79a79b118555cad4a4aa20') in 0.0231152 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_116.asset
+  artifactKey: Guid(12fee57a5b609d84dabf82264f9cf01f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_116.asset using Guid(12fee57a5b609d84dabf82264f9cf01f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e1284171a97a8cc67ffe36631d6cc811') in 0.0181769 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000023 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_113.asset
-  artifactKey: Guid(a849531e0ef6b27499ca5785f2ff38e3) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_113.asset using Guid(a849531e0ef6b27499ca5785f2ff38e3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'f2c071a7c841fd7e50f192616e8cd7ee') in 0.0189021 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_122.asset
+  artifactKey: Guid(975f49a076a302848b015f105b838f9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_122.asset using Guid(975f49a076a302848b015f105b838f9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '004c3470767a3e77cced1fa058b7be24') in 0.0158987 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.550772 seconds.
-  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_74.asset
-  artifactKey: Guid(1ecee03c4292dd041a750cddd438ee47) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_74.asset using Guid(1ecee03c4292dd041a750cddd438ee47) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e86251d751c699c8b69d793617c3023f') in 0.0207137 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000035 seconds.
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_114.asset
+  artifactKey: Guid(4837d1ea3f66ab841ad21513b87fe5e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_114.asset using Guid(4837d1ea3f66ab841ad21513b87fe5e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '16f7bbaaf5e4c2bc88b21f23c1aebcaa') in 0.0162456 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.245442 seconds.
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_131.asset
+  artifactKey: Guid(ca15555453cef74438196945087f2bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_131.asset using Guid(ca15555453cef74438196945087f2bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '015b29979eb3e16087737340cdfe156c') in 0.0245896 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_137.asset
+  artifactKey: Guid(6a6b16ed7f8d7e344a5a5040d870de44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_137.asset using Guid(6a6b16ed7f8d7e344a5a5040d870de44) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aaf910feb0dd05d1833834148b795fdb') in 0.0207831 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_141.asset
+  artifactKey: Guid(a92f176d36ebb04488dfeceeeb645f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_141.asset using Guid(a92f176d36ebb04488dfeceeeb645f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '57a7d090b153e935de43017531a4bb33') in 0.0140341 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_160.asset
+  artifactKey: Guid(419a272371294a94580d3f0b6a401067) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_160.asset using Guid(419a272371294a94580d3f0b6a401067) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cc073e54f434b23be469cfa574bce05d') in 0.0170958 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_163.asset
+  artifactKey: Guid(fe1c0a97f403ae040acec6ef5399208d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_163.asset using Guid(fe1c0a97f403ae040acec6ef5399208d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '76aad393df0742cae601505eb3ce4895') in 0.0186015 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_147.asset
+  artifactKey: Guid(385b3a8d9c5e91d4aa18d9a8b1d79169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_147.asset using Guid(385b3a8d9c5e91d4aa18d9a8b1d79169) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '473a82b37efaa5af1237eb87474e3f01') in 0.0129695 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_159.asset
+  artifactKey: Guid(30c50db20be46f044a7476952c9595da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/TilePallette/BiomeTiles/Gemini_Generated_Image_62b3pr62b3pr62b3_159.asset using Guid(30c50db20be46f044a7476952c9595da) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8a547537c294f8b7d007c115f05ff1e3') in 0.0250425 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server

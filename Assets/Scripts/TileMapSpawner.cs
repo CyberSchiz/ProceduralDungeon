@@ -17,6 +17,7 @@ public class TileMapSpawner : MonoBehaviour
         iceFloor1, iceFloor2, iceFloor3, iceWall;
 
     Dictionary<BiomeType, TileBase[]> biomeTiles;
+    private List<KeyValuePair<BiomeType, TileBase[]>> biomeList;
 
     public enum BiomeType
     {
@@ -24,6 +25,7 @@ public class TileMapSpawner : MonoBehaviour
         Lava,
         Ice
     }
+
 
     // Places floor tiles for every floor position
     public void SpawnFloorTiles(IEnumerable<Vector2Int> floorPos)
@@ -41,9 +43,10 @@ public class TileMapSpawner : MonoBehaviour
             { BiomeType.Ice, new TileBase[] { iceFloor1, iceFloor2, iceFloor3 } }
         };
 
-        List<KeyValuePair<BiomeType, TileBase[]>> biomeList = biomeTiles.ToList();
-
+        biomeList = biomeTiles.ToList();
+        TileBase tileToUse;
         // Shuffle the biome order
+
         for (int i = biomeList.Count - 1; i > 0; i--)
         {
             int randomIndex = Random.Range(0, i + 1);
@@ -54,29 +57,34 @@ public class TileMapSpawner : MonoBehaviour
 
         foreach (var tile in floorPos)
         {
+            TileBase[] biomeTileArray;
+            if (tile.x <= 50 && tile.y <= 50)
+            {
 
-                TileBase[] biomeTileArray;
+                biomeTileArray = biomeList[0].Value;
+            }
+            else if (tile.x > 60 && tile.y >= 60)
+            {
+                biomeTileArray = biomeList[1].Value;
+            }
+            else
+            {
+                biomeTileArray = biomeList[2].Value;
+            }
 
-                if (tile.x <= 5 && tile.y <= 5)
-                {
-                    biomeTileArray = biomeList[0].Value;
-                }
-                else if (tile.x > 5 && tile.y <= 5)
-                {
-                    biomeTileArray = biomeList[1].Value;
-                }
-                else
-                {
-                    biomeTileArray = biomeList[2].Value;
-                }
+            // using perlin noise to get a random tile from the selected biome
 
-                TileBase tileToUse = biomeTileArray[Random.Range(0, biomeTileArray.Length)];
+            float noise = Mathf.PerlinNoise(tile.x * 0.2f, tile.y * 0.2f);
 
-                SpawnSingleTile(floor, tileToUse, tile);
-            
+            int index = Mathf.FloorToInt(noise * biomeTileArray.Length);
+
+            index = Mathf.Clamp(index, 0, biomeTileArray.Length - 1);
+             Debug.Log($"noise={noise}, index={index}, length={biomeTileArray.Length}");
+            tileToUse = biomeTileArray[index];
+            SpawnSingleTile(floor, tileToUse, tile);
         }
-    }
 
+    }
     // Generic tile spawning method
     public void SpawnTiles(IEnumerable<Vector2Int> positions, Tilemap tilemap, TileBase tile)
     {
@@ -95,6 +103,36 @@ public class TileMapSpawner : MonoBehaviour
 
     internal void SpawnSingleWall(Vector2Int position)
     {
-        SpawnSingleTile(wall, wallTop, position);
+        TileBase wallTileToUse;
+
+        if (position.x <= 50 && position.y <= 50)
+        {
+            wallTileToUse = GetWallTileFromBiome(biomeList[0].Key);
+        }
+        else if (position.x > 60 && position.y >= 60)
+        {
+            wallTileToUse = GetWallTileFromBiome(biomeList[1].Key);
+        }
+        else
+        {
+            wallTileToUse = GetWallTileFromBiome(biomeList[2].Key);
+        }
+
+        SpawnSingleTile(wall, wallTileToUse, position);
+    }
+
+    private TileBase GetWallTileFromBiome(BiomeType biome)
+    {
+        switch (biome)
+        {
+            case BiomeType.Forest:
+                return wallTop;
+            case BiomeType.Lava:
+                return lavaWall;
+            case BiomeType.Ice:
+                return iceWall;
+            default:
+                return wallTop;
+        }
     }
 }
