@@ -18,6 +18,10 @@ public class RoomFirstGenerator : DungeonGenerator
     [SerializeField]
     private bool randomWalkRooms = false;
 
+    [SerializeField] private RoomDecorator roomDecorator;
+
+    private List<DungeonRoom> dungeonRooms = new List<DungeonRoom>();
+
 
     [SerializeField]
     private GameObject player;
@@ -49,17 +53,25 @@ public class RoomFirstGenerator : DungeonGenerator
         foreach (var room in roomsList)
         {
             roomCenters.Add((Vector2Int)Vector3Int.RoundToInt(room.center));
-            //set player spawn point
-            player.transform.position = new Vector3(roomCenters[0].x, roomCenters[0].y, 0);
-            Debug.Log("Player position is " + player.transform.position);
+            
         }
+        //set player spawn point
+        player.transform.position = new Vector3(roomCenters[0].x, roomCenters[0].y, 0);
+        Debug.Log("Player position is " + player.transform.position);
+
+        MarkSpawnRoom();
+        AssignRoomTypes();
 
         //Create corridors
         HashSet<Vector2Int> corridors = ConnectRooms(roomCenters);
+
+        roomDecorator.AssignFurnitureToRooms(dungeonRooms, corridors);
+
         floor.UnionWith(corridors);
 
 
         //spawn tiles
+        roomDecorator.SpawnFurniture(dungeonRooms);
         tileMapSpawner.SpawnFloorBiomeRooms(floor);
         WallGenerator.CreateWalls(floor, tileMapSpawner);
     }
@@ -88,6 +100,7 @@ public class RoomFirstGenerator : DungeonGenerator
     private HashSet<Vector2Int> CreateRoomsRandomly(List<BoundsInt> roomsList)
     {
         HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
+        dungeonRooms = new List<DungeonRoom>();
 
         for (int i = 0; i < roomsList.Count; i++)
         {
@@ -114,9 +127,22 @@ public class RoomFirstGenerator : DungeonGenerator
                 }
             }
 
+            DungeonRoom room = new DungeonRoom(filteredRoom, roomCenter);
+            dungeonRooms.Add(room);
+            //Debug.Log("Dungeon rooms count: " + dungeonRooms.Count);
+
         }
 
         return floor;
+    }
+
+    private void MarkSpawnRoom()
+    {
+        if (dungeonRooms.Count > 0)
+        {
+            dungeonRooms[0].isSpawnRoom = true;
+            dungeonRooms[0].roomType = RoomType.None;
+        }
     }
     // create L shaped corridor
     private HashSet<Vector2Int> CreateCorridor(Vector2Int currentRoomCenter, Vector2Int destination)
@@ -186,5 +212,28 @@ public class RoomFirstGenerator : DungeonGenerator
             }
         }
         return floor;
+    }
+
+    private void AssignRoomTypes()
+    {
+        foreach (var room in dungeonRooms)
+        {
+            if (room.isSpawnRoom)
+                continue;
+
+            room.roomType = GetRandomRoomType();
+        }
+    }
+
+    private RoomType GetRandomRoomType()
+    {
+        int roll = Random.Range(0, 100);
+
+        if (roll < 25) return RoomType.Library;
+        if (roll < 45) return RoomType.Armory;
+        if (roll < 65) return RoomType.Wineary;
+        if (roll < 80) return RoomType.CrateStorage;
+
+        return RoomType.None;
     }
 }

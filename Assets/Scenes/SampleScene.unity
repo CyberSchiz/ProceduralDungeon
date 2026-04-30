@@ -342,6 +342,7 @@ MonoBehaviour:
   dungeonHeight: 100
   offset: 2
   randomWalkRooms: 1
+  roomDecorator: {fileID: 1446369143}
   player: {fileID: 796090645}
 --- !u!4 &493231218
 Transform:
@@ -663,7 +664,64 @@ Transform:
   m_GameObject: {fileID: 796090645}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64, y: 8, z: 0}
+  m_LocalPosition: {x: 15, y: 11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1446369142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1446369144}
+  - component: {fileID: 1446369143}
+  m_Layer: 0
+  m_Name: RoomDecorator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1446369143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446369142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b02ff3f98975c64a9fd6754b37c8c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomDecorator
+  bookshelfPrefab: {fileID: 4069984755474799698, guid: 03a726c87981ad04d9ee9a4e07029e72, type: 3}
+  armorStandPrefab: {fileID: 5107051771598382465, guid: d4542b83e0e65804894e0d7017974b99, type: 3}
+  cratePrefab: {fileID: 3006548541075206501, guid: ac70dfa545fc8424fa080e4d6adb1ad5, type: 3}
+  barrelPrefab: {fileID: 5100233354148723118, guid: eeab756ffd2e3ad419b393dfa7f78843, type: 3}
+  genericDecorPrefabs:
+  - {fileID: 7610042455097569541, guid: 1b80d5e8fa0dd844ab3cb703178d711d, type: 3}
+  - {fileID: 3775166772281514847, guid: fd8f9d35d98d4d94abaaff62f4838891, type: 3}
+  - {fileID: 3348809116016203524, guid: 0b8ae24f45d6c1b4ba3235749e26799d, type: 3}
+  minGenericDecorPerRoom: 0
+  maxGenericDecorPerRoom: 2
+  genericItemEffects: []
+  minGenericItemsPerRoom: 0
+  maxGenericItemsPerRoom: 1
+--- !u!4 &1446369144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446369142}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 46.67149, y: 22.67496, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -851,3 +909,4 @@ SceneRoots:
   - {fileID: 44746983}
   - {fileID: 493231218}
   - {fileID: 796090647}
+  - {fileID: 1446369144}

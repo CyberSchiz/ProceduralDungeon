@@ -79,7 +79,6 @@ public class TileMapSpawner : MonoBehaviour
             int index = Mathf.FloorToInt(noise * biomeTileArray.Length);
 
             index = Mathf.Clamp(index, 0, biomeTileArray.Length - 1);
-             Debug.Log($"noise={noise}, index={index}, length={biomeTileArray.Length}");
             tileToUse = biomeTileArray[index];
             SpawnSingleTile(floor, tileToUse, tile);
         }
