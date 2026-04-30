@@ -56,7 +56,7 @@ public class RoomFirstGenerator : DungeonGenerator
             
         }
         //set player spawn point
-        player.transform.position = new Vector3(roomCenters[0].x, roomCenters[0].y, 0);
+        player.transform.position = new Vector3(roomCenters[0].x, roomCenters[0].y, -1);
         Debug.Log("Player position is " + player.transform.position);
 
         MarkSpawnRoom();
