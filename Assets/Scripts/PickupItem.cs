@@ -1,17 +1,48 @@
 using UnityEngine;
 
-public class PickupItem : MonoBehaviour
+public enum PotionType
 {
-    [SerializeField] private string itemName;
+    Health,
+    Speed,
+    Damage,
+    Trap
+}
+
+public class PotionPickup : MonoBehaviour
+{
+    [SerializeField] private PotionType potionType;
+    [SerializeField] private float value = 10f;
+    [SerializeField] private float duration = 5f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player"))
             return;
 
-        Debug.Log("Picked up: " + itemName);
+        CharacterMovement player = collision.GetComponent<CharacterMovement>();
 
-        // Later apply buffs/effects here
+        if (player == null)
+            return;
+
+        switch (potionType)
+        {
+            case PotionType.Health:
+                player.Heal((int)value);
+                break;
+
+            case PotionType.Speed:
+                player.AddSpeedTemporary(value, duration);
+                break;
+
+            case PotionType.Damage:
+                player.AddDamageTemporary((int)value, duration);
+                break;
+
+            case PotionType.Trap:
+                player.TakeDamage((int)value);
+                break;
+        }
+
         Destroy(gameObject);
     }
 }
