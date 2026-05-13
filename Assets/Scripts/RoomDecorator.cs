@@ -19,6 +19,11 @@ public class RoomDecorator : MonoBehaviour
     [SerializeField] private int minGenericItemsPerRoom = 0;
     [SerializeField] private int maxGenericItemsPerRoom = 2;
 
+    [Header("Enemies")]
+    [SerializeField] private GameObject[] enemyPrefabs;
+    [SerializeField] private int minEnemiesPerRoom = 0;
+    [SerializeField] private int maxEnemiesPerRoom = 2;
+
     public void AssignFurnitureToRooms(List<DungeonRoom> rooms, HashSet<Vector2Int> corridors)
     {
         foreach (var room in rooms)
@@ -47,6 +52,7 @@ public class RoomDecorator : MonoBehaviour
 
             AssignGenericDecorToRoom(room, corridors);
             AssignGenericItemsToRoom(room, corridors);
+            AssignEnemiesToRoom(room, corridors);
         }
     }
 
@@ -146,6 +152,61 @@ public class RoomDecorator : MonoBehaviour
 
             room.furniturePlacements.Add(new FurniturePlacement(prefab, chosenTile));
         }
+    }
+
+    private void AssignEnemiesToRoom(DungeonRoom room, HashSet<Vector2Int> corridors)
+    {
+        if (enemyPrefabs == null || enemyPrefabs.Length == 0)
+            return;
+
+        if (room.isSpawnRoom)
+            return;
+
+        int enemyCount = Random.Range(minEnemiesPerRoom, maxEnemiesPerRoom + 1);
+
+        List<Vector2Int> candidateTiles = new List<Vector2Int>();
+
+        foreach (var tile in room.floorTiles)
+        {
+            if (IsNextToCorridor(tile, corridors))
+                continue;
+
+            candidateTiles.Add(tile);
+        }
+
+        for (int i = 0; i < enemyCount && candidateTiles.Count > 0; i++)
+        {
+            int tileIndex = Random.Range(0, candidateTiles.Count);
+            Vector2Int chosenTile = candidateTiles[tileIndex];
+            candidateTiles.RemoveAt(tileIndex);
+
+            int enemyIndex = Random.Range(0, enemyPrefabs.Length);
+            GameObject chosenEnemy = enemyPrefabs[enemyIndex];
+
+            if (chosenEnemy != null)
+            {
+                room.furniturePlacements.Add(new FurniturePlacement(chosenEnemy, chosenTile));
+            }
+        }
+    }
+
+    private bool IsNextToCorridor(Vector2Int tile, HashSet<Vector2Int> corridors)
+    {
+        Vector2Int[] directions =
+        {
+        Vector2Int.up,
+        Vector2Int.down,
+        Vector2Int.left,
+        Vector2Int.right
+    };
+
+        foreach (var dir in directions)
+        {
+            if (corridors.Contains(tile + dir))
+                return true;
+        }
+
+        return false;
     }
 
     private bool IsNearWall(Vector2Int tile, HashSet<Vector2Int> roomTiles)

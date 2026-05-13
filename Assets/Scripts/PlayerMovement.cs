@@ -55,6 +55,10 @@ public class CharacterMovement : MonoBehaviour
     {
         health -= amount;
         Debug.Log("Took damage. Health: " + health);
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void AddSpeedTemporary(float amount, float duration)
